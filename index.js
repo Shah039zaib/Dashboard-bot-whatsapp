@@ -960,7 +960,15 @@ server.listen(process.env.PORT || 3000, () => {
 async function handleMessage(sock, message) {
     try {
         if (message.key.fromMe) return;
+       
+        // Newsletter/Broadcast ignore karo
+        if (senderId === 'status@broadcast') return;
+        if (senderId.endsWith('@broadcast')) return;
+        if (senderId.includes('newsletter')) return;
+        // Group messages ignore karo (optional - agar groups bhi ignore karni hain)
+        if (senderId.endsWith('@g.us')) return;
 
+        
         const senderId = message.key.remoteJid;
         const senderName = message.pushName || 'Customer';
         const msgType = Object.keys(message.message || {})[0];
