@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mega-agency-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: BOT_NAME
+        value: Mega Agency
+      - key: AI_PROVIDER
+        value: groq
+      - key: ADMIN_NUMBER
+        sync: false
+      - key: DASHBOARD_PASSWORD
+        sync: false
