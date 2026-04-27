@@ -1031,7 +1031,7 @@ async function handleMessage(sock, message) {
 // ─────────────────────────────────────────
 async function startBot() {
     try {
-        try { fs.rmSync('/tmp/auth_info', { recursive: true, force: true }); } catch (e) {}
+        //try { fs.rmSync('/tmp/auth_info', { recursive: true, force: true }); } catch (e) {}
 
         const { version, isLatest } = await fetchLatestBaileysVersion();
         console.log(`📱 WA Version: ${version.join('.')} — Latest: ${isLatest}`);
