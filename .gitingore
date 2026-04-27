@@ -1,0 +1,17 @@
+# Environment variables — KABHI GitHub pe mat daalo
+.env
+
+# Node modules
+node_modules/
+
+# Temp files
+/tmp/
+
+# Auth files
+auth_info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+16
